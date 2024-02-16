@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { RoomModule } from './modules/room.module';
+import { ProcedureModel } from './models/procedure.model';
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -16,6 +17,7 @@ import { RoomModule } from './modules/room.module';
       synchronize: true,
     }),
     RoomModule,
+    ProcedureModel
   ],
   controllers: [],
   providers: [],
