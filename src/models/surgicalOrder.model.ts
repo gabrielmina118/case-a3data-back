@@ -1,4 +1,10 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { RoomModel } from './room.model';
 import { HospitalModel } from './hospital.model';
 
@@ -7,7 +13,8 @@ export class SurgicalOrder {
   @PrimaryGeneratedColumn()
   codigo: number;
 
-  @ManyToOne(() => RoomModel, (room) => room.surgicalOrders)
+  @ManyToOne(() => RoomModel, { nullable: false, onDelete: 'CASCADE' })
+  @JoinColumn({ name: 'room_id', referencedColumnName: 'id' })
   room: RoomModel;
 
   @Column()
@@ -16,10 +23,11 @@ export class SurgicalOrder {
   @Column()
   patient: string;
 
-  @ManyToOne(() => HospitalModel, (hospital) => hospital.surgicalOrders)
+  @ManyToOne(() => HospitalModel, { nullable: false, onDelete: 'CASCADE' })
+  @JoinColumn({ name: 'hospital_id', referencedColumnName: 'id' })
   hospital: HospitalModel;
 
-  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' }) 
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   surgeryDate: Date;
 
   @Column({ length: 100 })
