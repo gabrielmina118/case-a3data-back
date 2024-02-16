@@ -8,4 +8,4 @@ import { ProcedureModel } from 'src/models/procedure.model';
   imports: [TypeOrmModule.forFeature([ProcedureModel])],
   controllers: [ProcedureController],
 })
-export class RoomModule {}
+export class ProcedureModule {}
