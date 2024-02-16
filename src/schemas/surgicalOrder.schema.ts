@@ -10,11 +10,8 @@ export class SurgicalOrderSchema {
   patient: string;
 
   @IsNotEmpty()
-  @IsDate()
-  surgeryDate: Date;
-
-  @IsNotEmpty()
   @IsString()
   @MaxLength(100)
   generalObservations: string;
+
 }

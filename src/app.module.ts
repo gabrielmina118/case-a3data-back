@@ -4,6 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { RoomModule } from './modules/room.module';
 import { ProcedureModule } from './modules/procedure.module';
 import { HospitalModule } from './modules/hospital.module';
+import { SurgicalOrderModule } from './modules/surgicalOrder.model';
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -20,6 +21,7 @@ import { HospitalModule } from './modules/hospital.module';
     RoomModule,
     ProcedureModule,
     HospitalModule,
+    SurgicalOrderModule,
   ],
   controllers: [],
   providers: [],

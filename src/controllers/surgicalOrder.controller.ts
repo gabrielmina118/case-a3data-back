@@ -27,4 +27,14 @@ export class SurgicalOrderController {
   ): Promise<SurgicalOrderModel> {
     return await this.model.save(body);
   }
+
+  @Get()
+  public async getAll(): Promise<SurgicalOrderModel[]> {
+    return await this.model
+      .createQueryBuilder('surgicalOrder')
+      .leftJoinAndSelect('surgicalOrder.room', 'room')
+      .leftJoinAndSelect('surgicalOrder.procedure', 'procedure') // Adicione se houver uma relação entre SurgicalOrder e Procedure
+      .leftJoinAndSelect('surgicalOrder.hospital', 'hospital')
+      .getMany();
+  }
 }

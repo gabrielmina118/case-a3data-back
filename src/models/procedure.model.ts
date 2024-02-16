@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { SurgicalOrderModel } from './surgicalOrder.model';
 
 @Entity()
 export class ProcedureModel {
@@ -7,4 +8,7 @@ export class ProcedureModel {
 
   @Column({ length: 255 })
   procedureName: string;
+
+  @OneToMany(() => SurgicalOrderModel, (surgicalOrder) => surgicalOrder.room)
+  surgicalOrders: SurgicalOrderModel[];
 }
