@@ -9,7 +9,7 @@ import { RoomModel } from './room.model';
 import { HospitalModel } from './hospital.model';
 
 @Entity()
-export class SurgicalOrder {
+export class SurgicalOrderModel {
   @PrimaryGeneratedColumn()
   codigo: number;
 
