@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { RoomModule } from './modules/room.module';
 import { ProcedureModule } from './modules/procedure.module';
+import { HospitalModule } from './modules/hospital.module';
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -18,6 +19,7 @@ import { ProcedureModule } from './modules/procedure.module';
     }),
     RoomModule,
     ProcedureModule,
+    HospitalModule,
   ],
   controllers: [],
   providers: [],
