@@ -37,4 +37,20 @@ export class SurgicalOrderController {
       .leftJoinAndSelect('surgicalOrder.hospital', 'hospital')
       .getMany();
   }
+
+  @Put(':id')
+  public async update(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() body: SurgicalOrderSchema,
+  ): Promise<SurgicalOrderModel> {
+    const surgicalOrder = await this.model.findOne({ where: { codigo: id } });
+
+    if (!surgicalOrder) {
+      throw new NotFoundException(`surgicalOrder not found with id -> ${id}`);
+    }
+
+    await this.model.update({ codigo: id }, body);
+
+    return await this.model.findOne({ where: { codigo: id } });
+  }
 }
