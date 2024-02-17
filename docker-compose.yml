@@ -13,5 +13,3 @@ services:
       MYSQL_DATABASE: pedido_cirurgico_a3data
       MYSQL_USER: root
       MYSQL_PASSWORD: password
-    ports:
-      - '3307:3306'
