@@ -69,4 +69,17 @@ export class SurgicalOrderController {
 
     return await this.model.findOne({ where: { codigo: id } });
   }
+
+  @Delete(':id')
+  public async delete(@Param('id', ParseIntPipe) id: number): Promise<string> {
+    const surgicalOrder = await this.model.findOne({ where: { codigo: id } });
+
+    if (!surgicalOrder) {
+      throw new NotFoundException(`surgicalOrder not found with id -> ${id}`);
+    }
+
+    await this.model.delete(id);
+
+    return `the surgicalOrder with this id -> ${id} was successfully deleted`;
+  }
 }
