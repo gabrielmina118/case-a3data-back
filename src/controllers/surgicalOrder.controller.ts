@@ -38,6 +38,22 @@ export class SurgicalOrderController {
       .getMany();
   }
 
+  @Get(':id')
+  public async get(
+    @Param('id', ParseIntPipe) id: number,
+  ): Promise<SurgicalOrderModel> {
+    const surgicalOder = await this.model.findOne({
+      where: { codigo: id },
+      relations: ['room', 'procedure', 'hospital'],
+    });
+
+    if (!surgicalOder) {
+      throw new NotFoundException(`surgicalOder not found with id -> ${id}`);
+    }
+
+    return surgicalOder;
+  }
+
   @Put(':id')
   public async update(
     @Param('id', ParseIntPipe) id: number,
