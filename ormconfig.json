@@ -1,0 +1,10 @@
+{
+  "type": "mysql",
+  "host": "mysql",
+  "port": 3306,
+  "username": "root",
+  "password": "password",
+  "database": "pedido_cirurgico_a3data",
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "synchronize": true
+}
