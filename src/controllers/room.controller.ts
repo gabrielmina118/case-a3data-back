@@ -10,8 +10,8 @@ import {
   Put,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { RoomModel } from 'src/models/room.model';
-import { RoomSchema } from 'src/schemas/room.schema';
+import { RoomModel } from '../models/room.model';
+import { RoomSchema } from '../schemas/room.schema';
 import { Repository } from 'typeorm';
 
 @Controller('/room')
