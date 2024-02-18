@@ -10,8 +10,8 @@ import {
   Put,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ProcedureModel } from 'src/models/procedure.model';
-import { ProcedureSchema } from 'src/schemas/procedure.schema';
+import { ProcedureModel } from '../models/procedure.model';
+import { ProcedureSchema } from '../schemas/procedure.schema';
 import { Repository } from 'typeorm';
 
 @Controller('/procedure')

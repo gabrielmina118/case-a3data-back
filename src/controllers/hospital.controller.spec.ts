@@ -30,7 +30,7 @@ describe('HospitalController', () => {
 
   describe('create', () => {
     it('should create a hospital', async () => {
-      const hospitalData = { name: 'Test Hospital', location: 'Test Location' };
+      const hospitalData = { name: 'Test Hospital' };
       const createdHospital = new HospitalModel();
       jest.spyOn(hospitalModel, 'save').mockResolvedValue(createdHospital);
 
