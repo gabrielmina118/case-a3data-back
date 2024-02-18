@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import {
   Body,
   Controller,
@@ -59,7 +58,7 @@ export class RoomController {
 
     return await this.model.findOne({ where: { id } });
   }
-  
+
   @Delete(':id')
   public async delete(@Param('id', ParseIntPipe) id: number): Promise<string> {
     const room = await this.model.findOne({ where: { id } });

@@ -14,4 +14,10 @@ export class HospitalModel {
     (surgicalOrder) => surgicalOrder.hospital,
   )
   surgicalOrders: SurgicalOrderModel[];
+
+  constructor(hospital?: Partial<HospitalModel>) {
+    this.id = hospital?.id;
+    this.name = hospital?.name;
+    this.surgicalOrders = hospital?.surgicalOrders;
+  }
 }
