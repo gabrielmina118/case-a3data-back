@@ -10,8 +10,8 @@ import {
   Put,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { HospitalModel } from 'src/models/hospital.model';
-import { HospitalSchema } from 'src/schemas/hospital.schema';
+import { HospitalModel } from '../models/hospital.model';
+import { HospitalSchema } from '../schemas/hospital.schema';
 import { Repository } from 'typeorm';
 
 @Controller('/hospital')
