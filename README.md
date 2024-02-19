@@ -20,7 +20,7 @@ Este documento descreve a documentação do backend para a aplicação web de Pe
    ```
 3. Configurar o .env:
     ```
-   alterar o arquivo .env-example com as informações de configuração do banco de dados
+   alterar o arquivo .env-example para .env e configurar com as informações de acesso ao banco de dados
     DB_HOST=127.0.0.1
    DB_PORT=3306
    DB_USERNAME=root
