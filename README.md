@@ -14,7 +14,8 @@ Este documento descreve a documentação do backend para a aplicação web de Pe
    ```
 2. Rodar código:
     ```
-   cd pedido-cirurgico-back
+   cd case-a3data-back
+   npm install
    npm run dev
    ```
     
