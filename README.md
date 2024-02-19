@@ -18,6 +18,16 @@ Este documento descreve a documentação do backend para a aplicação web de Pe
    npm install
    npm run dev
    ```
+3. Configurar o .env:
+    ```
+   alterar o arquivo .env-example com as informações de configuração do banco de dados
+    DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_USERNAME=root
+   DB_PASSWORD=password
+   DB_DATABASE=database
+   ```
+
     
 ## Documentação do Postman rodando localmente :
 https://documenter.getpostman.com/view/15065875/2sA2r824bW
