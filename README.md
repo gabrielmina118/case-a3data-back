@@ -14,6 +14,7 @@ Este documento descreve a documentação do backend para a aplicação web de Pe
    ```
 2. Rodar código:
     ```
+   cd pedido-cirurgico-back
    npm run dev
    ```
     
@@ -37,15 +38,6 @@ projeto/
 |-- app.module.ts
 |-- main.ts
 ```
-
-## Funcionalidades :
-
-- **Contagem Regressiva:** O jogo possui uma contagem regressiva que diminui a cada segundo.
-- **Quadrados Aleatórios:** Um quadrado é aleatoriamente destacado para ser clicado.
-- **Pontuação:** Ganhe pontos clicando no quadrado certo.
-- **Vidas:** Você tem três vidas. Cada clique errado reduz uma vida.
-- **Fim de Jogo:** O jogo termina quando o tempo acaba ou você perde todas as vidas.
-
 
 ## Tecnologias Utilizadas :
 
