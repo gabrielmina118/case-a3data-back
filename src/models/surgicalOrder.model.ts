@@ -12,7 +12,7 @@ import { ProcedureModel } from './procedure.model';
 @Entity()
 export class SurgicalOrderModel {
   @PrimaryGeneratedColumn()
-  codigo: number;
+  id: number;
 
   @ManyToOne(() => RoomModel, { nullable: false, onDelete: 'CASCADE' })
   @JoinColumn({ name: 'room_id', referencedColumnName: 'id' })
