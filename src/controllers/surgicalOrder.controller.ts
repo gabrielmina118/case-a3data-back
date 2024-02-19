@@ -83,7 +83,6 @@ export class SurgicalOrderController {
     @Param('id', ParseIntPipe) id: number,
     @Body() body: SurgicalOrderSchema,
   ): Promise<SurgicalOrderModel> {
-    
     console.log('body', body);
     const surgicalOrder = await this.model
       .createQueryBuilder('surgicalOrder')
