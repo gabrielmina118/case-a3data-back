@@ -1,73 +1,77 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+---
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# backEnd- A3data
 
-## Description
+Este documento descreve a documentação do backend para a aplicação web de Pedido Cirúrgico. O backend é desenvolvido utilizando o framework NestJS e utiliza um banco de dados MySQL para armazenar os dados dos pedidos cirúrgicos. Além disso, são utilizados TypeORM como ORM para manipulação do banco de dados. O objetivo deste backend é fornecer serviços RESTful para gerenciar os pedidos cirúrgicos, incluindo operações de listar, cadastrar, editar, visualizar e excluir pedidos cirúrgicos.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Instruções de Instalação
 
-## Installation
+1. Clone este repositório:
 
-```bash
-$ yarn install
+   ```bash
+   git clone https://github.com/seu-usuario/case-a3data-back
+   ```
+2. Rodar código:
+    ```
+   npm run dev
+   ```
+    
+## Documentação do Postman rodando localmente :
+https://documenter.getpostman.com/view/15065875/2sA2r824bW
+
+
+## Estrutura de Diretórios :
+
+O projeto está organizado da seguinte forma:
+
+```
+projeto/
+|-- src/
+|   |-- controllers/
+|   |   |-- controller.spec.ts/
+|   |-- interceptions/
+|   |-- models/
+|   |-- modules/
+|   |-- schemas/
+|-- app.module.ts
+|-- main.ts
 ```
 
-## Running the app
+## Funcionalidades :
 
-```bash
-# development
-$ yarn run start
+- **Contagem Regressiva:** O jogo possui uma contagem regressiva que diminui a cada segundo.
+- **Quadrados Aleatórios:** Um quadrado é aleatoriamente destacado para ser clicado.
+- **Pontuação:** Ganhe pontos clicando no quadrado certo.
+- **Vidas:** Você tem três vidas. Cada clique errado reduz uma vida.
+- **Fim de Jogo:** O jogo termina quando o tempo acaba ou você perde todas as vidas.
 
-# watch mode
-$ yarn run start:dev
 
-# production mode
-$ yarn run start:prod
-```
+## Tecnologias Utilizadas :
 
-## Test
+- NestJS: Framework backend que utiliza TypeScript e fornece uma arquitetura modular e escalável.
+- Banco de Dados: MySQL  para armazenar os dados dos pedidos cirúrgicos.
+- TypeORM: ORM para manipular o banco de dados e realizar operações CRUD de forma simplificada.
+- Testes Unitários e de Integração: Garantem a qualidade do código e o funcionamento correto das operações.
+- Arquitetura Limpa: Foco na organização e separação de responsabilidades para garantir um código limpo e manutenível.
+- Documentação do Código: Utilização de comentários e documentação adequada para facilitar a compreensão e manutenção do código.
 
-```bash
-# unit tests
-$ yarn run test
+## Testes :
+Os testes devem ser executados utilizando o comando `npm run test`.
 
-# e2e tests
-$ yarn run test:e2e
+## Endpoints da API :
+Os endpoints disponíveis são:
+- GET: Retorna um recurso específico.
+- GET All: Retorna todos os recursos.
+- POST: Cria um novo recurso.
+- PUT: Atualiza um recurso existente.
+- DELETE: Remove um recurso existente.
 
-# test coverage
-$ yarn run test:cov
-```
+## Observações :
+Certifique-se de seguir as convenções de nomenclatura e organização de código do NestJS para manter o projeto limpo e fácil de manter. Utilize comentários adequados nos arquivos de código para documentar o funcionamento e a finalidade de cada componente.
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+---
